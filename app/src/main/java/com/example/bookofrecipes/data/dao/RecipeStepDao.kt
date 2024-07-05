@@ -24,6 +24,12 @@ interface RecipeStepDao {
     suspend fun getByNumberForRecipe(number: Int, recipe: Recipe) =
         getByNumberAndRecipeId(number, recipe.id)
 
+    @Query("SELECT * FROM recipe_steps WHERE id = :id")
+    suspend fun getById(id: Long): RecipeStep?
+
+    @Query("SELECT * FROM recipe_steps")
+    suspend fun getAll(id: Long): List<RecipeStep>
+
     @Update
     suspend fun update(recipeStep: RecipeStep)
 

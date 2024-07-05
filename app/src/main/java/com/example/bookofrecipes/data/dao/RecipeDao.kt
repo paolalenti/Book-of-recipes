@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import com.example.bookofrecipes.data.models.Ingredient
 import com.example.bookofrecipes.data.models.Recipe
 
 @Dao
@@ -13,7 +14,10 @@ interface RecipeDao {
     suspend fun insert(vararg recipe: Recipe)
 
     @Query("SELECT * FROM recipes WHERE recipes MATCH :query")
-    suspend fun search(query: String): List<Recipe>
+    suspend fun searchAll(query: String): List<Recipe>
+
+    @Query("SELECT * FROM recipes WHERE recipes MATCH :query LIMIT :limit OFFSET :offset")
+    suspend fun searchLimited(query: String, limit: Long, offset: Long = 0) : List<Recipe>
 
     @Query("SELECT * FROM recipes")
     suspend fun getAll(): List<Recipe>
