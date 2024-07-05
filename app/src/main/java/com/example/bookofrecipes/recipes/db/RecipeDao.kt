@@ -14,10 +14,10 @@ interface RecipeDao {
     suspend fun insert(vararg recipe: Recipe): Long
 
     @Transaction
-    @Query("SELECT * FROM Recipe")
+    @Query("SELECT * FROM recipes")
     suspend fun getAll(): List<Recipe>
 
-    @Query("SELECT * FROM Recipe WHERE rowid = :id")
+    @Query("SELECT * FROM recipes WHERE rowid = :id LIMIT 1")
     suspend fun getById(id: Long): Recipe?
 
     @Update
