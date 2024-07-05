@@ -8,7 +8,7 @@ import androidx.room.PrimaryKey
 @Fts4(notIndexed = ["time"])
 @Entity
 data class Recipe(
-    @PrimaryKey @ColumnInfo(name = "rowid") val id: Long,
+    @PrimaryKey(autoGenerate = true) @ColumnInfo(name = "rowid") val id: Long = 0,
     val name: String,
     val time: String?,
     val description: String?,
