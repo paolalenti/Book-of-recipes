@@ -11,7 +11,7 @@ import com.example.bookofrecipes.data.models.RecipeStep
 @Dao
 interface RecipeStepDao {
     @Insert
-    suspend fun insert(vararg step: RecipeStep): Long
+    suspend fun insert(vararg step: RecipeStep)
 
     @Query("SELECT * FROM recipe_steps WHERE recipe_id = :recipeId AND number = :number LIMIT 1")
     suspend fun getByNumberAndRecipeId(number: Int, recipeId: Long): RecipeStep?

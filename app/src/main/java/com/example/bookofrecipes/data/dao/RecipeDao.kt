@@ -10,7 +10,7 @@ import com.example.bookofrecipes.data.models.Recipe
 @Dao
 interface RecipeDao {
     @Insert
-    suspend fun insert(vararg recipe: Recipe): Long
+    suspend fun insert(vararg recipe: Recipe)
 
     @Query("SELECT * FROM recipes WHERE recipes MATCH :query")
     suspend fun search(query: String): List<Recipe>
