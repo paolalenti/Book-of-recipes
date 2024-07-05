@@ -1,12 +1,12 @@
-package com.example.bookofrecipes.recipes.db
+package com.example.bookofrecipes.data.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import com.example.bookofrecipes.recipes.Recipe
-import com.example.bookofrecipes.recipes.RecipeStep
+import com.example.bookofrecipes.data.models.Recipe
+import com.example.bookofrecipes.data.models.RecipeStep
 
 @Dao
 interface RecipeStepDao {

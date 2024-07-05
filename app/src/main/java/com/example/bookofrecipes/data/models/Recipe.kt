@@ -1,4 +1,4 @@
-package com.example.bookofrecipes.recipes
+package com.example.bookofrecipes.data.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,19 +1,20 @@
-package com.example.bookofrecipes.recipes.db
+package com.example.bookofrecipes.data.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Transaction
 import androidx.room.Update
-import com.example.bookofrecipes.recipes.Recipe
+import com.example.bookofrecipes.data.models.Recipe
 
 @Dao
 interface RecipeDao {
     @Insert
     suspend fun insert(vararg recipe: Recipe): Long
 
-    @Transaction
+    @Query("SELECT * FROM recipes WHERE recipes MATCH :query")
+    suspend fun search(query: String): List<Recipe>
+
     @Query("SELECT * FROM recipes")
     suspend fun getAll(): List<Recipe>
 
