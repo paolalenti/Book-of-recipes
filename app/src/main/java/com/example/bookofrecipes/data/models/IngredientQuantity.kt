@@ -12,17 +12,17 @@ import androidx.room.PrimaryKey
             entity = Recipe::class,
             parentColumns = ["rowid"],
             childColumns = ["recipe_id"],
-            onDelete = ForeignKey.NO_ACTION
+            onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
             entity = Ingredient::class,
             parentColumns = ["rowid"],
             childColumns = ["ingredient_id"],
-            onDelete = ForeignKey.NO_ACTION
+            onDelete = ForeignKey.RESTRICT
         )
     ]
 )
-data class IngredientQuanitity(
+data class IngredientQuantity(
     @PrimaryKey val id: Long = 0,
     @ColumnInfo(name = "recipe_id") val recipeId: Long,
     @ColumnInfo(name = "ingredient_id") val ingredientId: Long,
