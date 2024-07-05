@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Книга рецептов</string>
+    <string name="favorites_screen">Избранное</string>
+    <string name="settings_screen">Настройки</string>
+    <string name="home_screen">Рецепты</string>
+</resources>
