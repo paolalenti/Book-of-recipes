@@ -26,5 +26,5 @@ data class IngredientQuantity(
     @PrimaryKey val id: Long = 0,
     @ColumnInfo(name = "recipe_id") val recipeId: Long,
     @ColumnInfo(name = "ingredient_id") val ingredientId: Long,
-    val quantity: String?
+    val quantity: String? = null
 )

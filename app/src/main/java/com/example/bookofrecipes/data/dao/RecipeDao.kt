@@ -11,23 +11,23 @@ import com.example.bookofrecipes.data.models.Recipe
 @Dao
 interface RecipeDao {
     @Insert
-    suspend fun insert(vararg recipe: Recipe)
+    fun insert(vararg recipe: Recipe)
 
     @Query("SELECT * FROM recipes WHERE recipes MATCH :query")
-    suspend fun searchAll(query: String): List<Recipe>
+    fun searchAll(query: String): List<Recipe>
 
     @Query("SELECT * FROM recipes WHERE recipes MATCH :query LIMIT :limit OFFSET :offset")
-    suspend fun searchLimited(query: String, limit: Long, offset: Long = 0) : List<Recipe>
+    fun searchLimited(query: String, limit: Long, offset: Long = 0) : List<Recipe>
 
     @Query("SELECT * FROM recipes")
-    suspend fun getAll(): List<Recipe>
+    fun getAll(): List<Recipe>
 
     @Query("SELECT * FROM recipes WHERE rowid = :id")
-    suspend fun getById(id: Long): Recipe?
+    fun getById(id: Long): Recipe?
 
     @Update
-    suspend fun update(recipe: Recipe)
+    fun update(recipe: Recipe)
 
     @Delete
-    suspend fun delete(recipe: Recipe)
+    fun delete(recipe: Recipe)
 }
