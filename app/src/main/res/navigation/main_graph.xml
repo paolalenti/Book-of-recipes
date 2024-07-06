@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.bookofrecipes.HomeFragment"
+        android:name="com.example.bookofrecipes.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,17 +16,17 @@
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.bookofrecipes.FavoritesFragment"
+        android:name="com.example.bookofrecipes.fragments.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" />
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.example.bookofrecipes.SettingsFragment"
+        android:name="com.example.bookofrecipes.fragments.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/homeAdvancedFragment"
-        android:name="com.example.bookofrecipes.HomeAdvancedFragment"
+        android:name="com.example.bookofrecipes.fragments.HomeAdvancedFragment"
         android:label="fragment_home_advanced"
         tools:layout="@layout/fragment_home_advanced" />
 </navigation>

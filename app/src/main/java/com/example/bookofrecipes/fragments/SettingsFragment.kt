@@ -1,4 +1,4 @@
-package com.example.bookofrecipes
+package com.example.bookofrecipes.fragments
 
 import android.os.Bundle
 import android.view.View

@@ -1,4 +1,4 @@
-package com.example.bookofrecipes
+package com.example.bookofrecipes.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -11,7 +11,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.bookofrecipes.R
 import com.example.bookofrecipes.databinding.FragmentHomeAdvancedBinding
-import com.example.bookofrecipes.RecipeRepository
+import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
 
 class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
     private var binding: FragmentHomeAdvancedBinding? = null
