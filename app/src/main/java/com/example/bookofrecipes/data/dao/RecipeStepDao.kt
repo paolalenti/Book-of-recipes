@@ -28,7 +28,7 @@ interface RecipeStepDao {
     fun getById(id: Long): RecipeStep?
 
     @Query("SELECT * FROM recipe_steps")
-    fun getAll(id: Long): List<RecipeStep>
+    fun getAll(): List<RecipeStep>
 
     @Update
     fun update(recipeStep: RecipeStep)

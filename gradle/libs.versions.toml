@@ -12,7 +12,7 @@ activity = "1.9.0"
 constraintlayout = "2.1.4"
 navVersion = "2.7.7"
 roomRuntime = "2.6.1"
-kts = "1.9.24-1.0.20"
+ksp = "1.9.0-1.0.13"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,7 +26,7 @@ junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "glideVersion" }
+glide-ksp = { module = "com.github.bumptech.glide:ksp", version.ref = "glideVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -34,5 +34,5 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-google-devtools-kts = {id="com.google.devtools.ksp", version.ref="kts"}
+google-devtools-ksp = {id="com.google.devtools.ksp", version.ref="ksp"}
 

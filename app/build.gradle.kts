@@ -1,12 +1,12 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.google.devtools.kts)
+    alias(libs.plugins.google.devtools.ksp)
 }
 
 android {
-    namespace = "com.example.bookofrecipes"
     compileSdk = 34
+    namespace = "com.example.bookofrecipes"
 
     defaultConfig {
         applicationId = "com.example.bookofrecipes"
@@ -35,6 +35,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -43,7 +44,7 @@ dependencies {
     ksp(libs.androidx.room.compiler)
 
     implementation(libs.glide)
-    ksp(libs.ksp)
+    ksp(libs.glide.ksp)
 
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)

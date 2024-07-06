@@ -15,17 +15,8 @@ interface IngredientQuantityDao {
     @Query("SELECT * FROM ingredients_quantities WHERE recipe_id = :recipeId")
     fun getAllByRecipeId(recipeId: Long): List<IngredientQuantity>
 
-    @Query("SELECT * FROM ingredients_quantities WHERE recipe_id = :recipeId")
-    fun getAllByIngredientId(recipeId: Long): List<IngredientQuantity>
-
-    @Query("SELECT * FROM ingredients_quantities WHERE recipe_id in (:ingredientIds)")
-    fun getAllByAnyIngredientId(ingredientIds: List<Long>): List<IngredientQuantity>
-
-    @Query("SELECT * FROM ingredients_quantities, " +
-            "(SELECT recipe_id, COUNT(recipe_id) as cnt FROM ingredients_quantities " +
-            "WHERE ingredient_id in (:ingredientIds) GROUP BY recipe_id HAVING cnt == :count) subquery " +
-            "WHERE recipe_id = subquery.recipe_id")
-    fun getAllByAllIngredientId(ingredientIds: List<Long>, count: Int = ingredientIds.size): List<IngredientQuantity>
+    @Query("SELECT * FROM ingredients_quantities WHERE ingredient_id = :ingredientId")
+    fun getAllByIngredientId(ingredientId: Long): List<IngredientQuantity>
 
     @Update
     fun update(ingredientQuantity: IngredientQuantity)

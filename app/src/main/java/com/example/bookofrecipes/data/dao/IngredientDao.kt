@@ -12,10 +12,13 @@ interface IngredientDao {
     @Insert
     fun insert(vararg ingredient: Ingredient)
 
-    @Query("SELECT * FROM ingredients WHERE ingredients MATCH :query")
+    @Query("SELECT * FROM ingredients JOIN ingredient_fts " +
+            "ON ingredients.id = ingredient_fts.rowid WHERE ingredient_fts MATCH :query")
     fun searchAll(query: String) : List<Ingredient>
 
-    @Query("SELECT * FROM ingredients WHERE ingredients MATCH :query LIMIT :limit OFFSET :offset")
+    @Query("SELECT * FROM ingredients JOIN ingredient_fts " +
+            "ON ingredients.id = ingredient_fts.rowid WHERE ingredient_fts MATCH :query " +
+            "LIMIT :limit OFFSET :offset")
     fun searchLimited(query: String, limit: Long, offset: Long = 0) : List<Ingredient>
 
     @Query("SELECT * FROM ingredients WHERE rowid = :id")
