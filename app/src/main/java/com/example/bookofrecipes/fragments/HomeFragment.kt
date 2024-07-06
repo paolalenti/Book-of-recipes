@@ -1,4 +1,4 @@
-package com.example.bookofrecipes
+package com.example.bookofrecipes.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,6 +7,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.bookofrecipes.R
+import com.example.bookofrecipes.recyclers.recipes.RecipeAdapter
+import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
 import com.example.bookofrecipes.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {

@@ -1,10 +1,11 @@
-package com.example.bookofrecipes
+package com.example.bookofrecipes.recyclers.recipes
 
 import android.content.Context
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
+import com.example.bookofrecipes.R
 import com.example.bookofrecipes.databinding.ItemRecipeBinding
 
 
