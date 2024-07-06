@@ -10,34 +10,66 @@
     app:cardCornerRadius="12dp"
     app:cardElevation="8dp">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp">
+        android:layout_height="wrap_content">
 
+        <!-- ImageView остается без изменений -->
         <ImageView
             android:id="@+id/ivImage"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scaleType="centerCrop"
-            app:layout_constraintDimensionRatio="21:9"
+            app:layout_constraintDimensionRatio="2:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             tools:ignore="ContentDescription"
             tools:src="@drawable/apple_pie" />
 
+        <View
+            android:id="@+id/viewTransparentBackground"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="#AA000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/ivImage" />
+
         <TextView
             android:id="@+id/tvName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ivImage"
-            tools:text="Apple Pie" />
+            android:textColor="@color/white"
+            android:gravity="start"
+            android:fontFamily="@font/calibri"
+            android:paddingStart="16dp"
+            android:textSize="24sp"
+            android:paddingBottom="0dp"
+            app:layout_constraintStart_toStartOf="@id/viewTransparentBackground"
+            app:layout_constraintEnd_toEndOf="@id/viewTransparentBackground"
+            app:layout_constraintBottom_toTopOf="@id/tvCookingTime"
+            tools:text="Apple Pie"
+            tools:ignore="RtlSymmetry" />
 
-
+        <TextView
+            android:id="@+id/tvCookingTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_orange"
+            android:textSize="16sp"
+            android:fontFamily="@font/calibri"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp"
+            app:layout_constraintStart_toStartOf="@id/viewTransparentBackground"
+            app:layout_constraintEnd_toEndOf="@id/viewTransparentBackground"
+            app:layout_constraintBottom_toBottomOf="@id/viewTransparentBackground"
+            tools:text="Время приготовления: 1 час"
+            tools:ignore="RtlSymmetry" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
+
+
+
+
