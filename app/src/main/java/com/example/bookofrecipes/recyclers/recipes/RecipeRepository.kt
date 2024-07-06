@@ -1,4 +1,4 @@
-package com.example.bookofrecipes
+package com.example.bookofrecipes.recyclers.recipes
 
 object RecipeRepository {
 
