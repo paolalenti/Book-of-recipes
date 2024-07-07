@@ -4,4 +4,6 @@
     <string name="favorites_screen">Избранное</string>
     <string name="settings_screen">Настройки</string>
     <string name="home_screen">Рецепты</string>
+    <string name="main_menu_title">Рецепты для вас</string>
+    <string name="autor_list_title">Над приложением работали:</string>
 </resources>

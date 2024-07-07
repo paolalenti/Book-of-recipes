@@ -3,4 +3,16 @@
     <string name="favorites_screen">Favorites</string>
     <string name="settings_screen">Settings</string>
     <string name="home_screen">Recipes</string>
+    <string name="main_menu_title">Recipes for you</string>
+    <string name="main_menu_add_button" translatable="false">+</string>
+    <string name="autor_list_title">Have been working on the application:</string>
+    <string name="paolalenti" translatable="false">\@paolalenti</string>
+    <string name="github_paolalenti" translatable="false">github:paolalenti</string>
+    <string name="teruuj1" translatable="false">\@teruuj1</string>
+    <string name="github_teruuj1" translatable="false">github:teruuj1</string>
+    <string name="yaroslav_tech" translatable="false">\@yaroslav_tech</string>
+    <string name="github_k4li_0x0" translatable="false">github:k4li-0x0</string>
+    <string name="website_k4li_ru" translatable="false">website:k4li.ru</string>
+    <string name="ejfjdkd" translatable="false">\@Ejfjdkd</string>
+    <string name="github_aliyakad" translatable="false">github:AliyaKad</string>
 </resources>
