@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -12,6 +13,8 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.bookofrecipes.R
 import com.example.bookofrecipes.databinding.FragmentHomeAdvancedBinding
 import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
+import com.example.bookofrecipes.recyclers.recipes.recyclers.ingredients.IngredientAdapter
+import com.example.bookofrecipes.recyclers.recipes.recyclers.steps.StepAdapter
 
 class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
     private var binding: FragmentHomeAdvancedBinding? = null
@@ -23,14 +26,23 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeAdvancedBinding.bind(view)
+        val recipeId = arguments?.getInt("RECIPE_ID") ?: return
+        val recipe = RecipeRepository.recipes.find { it.id == recipeId } ?: return
         glide = Glide.with(this@HomeAdvancedFragment)
         binding?.run {
-            val url = arguments?.getString(ARG_URL)
-            glide?.load(url)
+            tvName.text = recipe.name
+            tvTime.text = recipe.time
+
+            glide?.load(recipe.url)
                 ?.error(R.drawable.img_not_found)
                 ?.placeholder(R.drawable.img_cat)?.apply(requestOptions)
                 ?.into(ivAboutImage)
-            tvName.text = arguments?.getString(ARG_NAME)
+
+            rvIngredient.layoutManager = LinearLayoutManager(context)
+            rvIngredient.adapter = IngredientAdapter(recipe.ingredients)
+
+            rvStep.layoutManager = LinearLayoutManager(context)
+            rvStep.adapter = StepAdapter(recipe.steps)
 
             fabGoBack.setOnClickListener {
                 findNavController().navigateUp()
@@ -39,14 +51,10 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
     }
 
     companion object {
-        private const val ARG_URL = "URL"
-        private const val ARG_NAME = "NAME"
-        fun bundle(context: Context?, indx: Int): Bundle = Bundle().apply {
-            val recipe = RecipeRepository.recipes.find {it.id == indx}
-            if (recipe != null) {
-                putString(ARG_URL, recipe.url)
-                putString(ARG_NAME, recipe.name)
-            }
+        fun bundle(context: Context?, recipeId: Int): Bundle {
+            val bundle = Bundle()
+            bundle.putInt("RECIPE_ID", recipeId)
+            return bundle
         }
     }
 
