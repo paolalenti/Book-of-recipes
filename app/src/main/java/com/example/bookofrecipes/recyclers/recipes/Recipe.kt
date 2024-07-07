@@ -6,7 +6,7 @@ data class Recipe(
     val id: Int,
     val name: String,
     val time: String,
-    val ingredients: List<RecipeStep>,
-    val steps: List<String>,
+    val ingredients: List<String>,
+    val steps: List<RecipeStep>,
     val url: String
 )
