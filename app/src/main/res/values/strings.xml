@@ -15,4 +15,13 @@
     <string name="website_k4li_ru" translatable="false">website:k4li.ru</string>
     <string name="ejfjdkd" translatable="false">\@Ejfjdkd</string>
     <string name="github_aliyakad" translatable="false">github:AliyaKad</string>
+    <string name="editor_recipe_name">Recipe name</string>
+    <string name="editor_recipe_time">Time to cook</string>
+    <string name="editor_create_recipe">Create</string>
+    <string name="editor_ingredients_label">Ingredients</string>
+    <string name="editor_steps_label">Steps</string>
+    <string name="editor_recipe_description">Description</string>
+    <string name="editor_ingredient">Ingredient</string>
+    <string name="editor_ingredient_quantity">Quantity</string>
+    <string name="editor_delete_ingredient">Delete ingredient</string>
 </resources>
