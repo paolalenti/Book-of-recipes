@@ -10,7 +10,7 @@ import com.example.bookofrecipes.data.models.Recipe
 @Dao
 interface RecipeDao {
     @Insert
-    fun insert(vararg recipe: Recipe)
+    fun insert(vararg recipe: Recipe): Array<Long>
 
     @Query("SELECT * FROM recipes JOIN recipe_fts ON recipes.id = recipe_fts.rowid " +
             "WHERE recipe_fts MATCH :query")

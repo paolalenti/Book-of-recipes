@@ -11,7 +11,7 @@ import com.example.bookofrecipes.data.models.Ingredient
 @Dao
 interface IngredientDao {
     @Insert
-    fun insert(vararg ingredient: Ingredient)
+    fun insert(vararg ingredient: Ingredient): Array<Long>
 
     @Query("SELECT * FROM ingredients JOIN ingredient_fts " +
             "ON ingredients.id = ingredient_fts.rowid WHERE ingredient_fts MATCH :query")
