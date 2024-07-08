@@ -1,4 +1,4 @@
-package com.example.bookofrecipes.recyclers.recipes.recyclers.steps
+package com.example.bookofrecipes.recyclers.steps
 
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookofrecipes.databinding.ItemStepBinding
