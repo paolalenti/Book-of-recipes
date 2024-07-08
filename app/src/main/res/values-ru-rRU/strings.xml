@@ -9,4 +9,10 @@
     <string name="editor_recipe_name">Название рецепта</string>
     <string name="editor_recipe_time">Время приготовления</string>
     <string name="editor_create_recipe">Создать</string>
+    <string name="editor_ingredients_label">Ингредиенты</string>
+    <string name="editor_steps_label">Шаги приготовления</string>
+    <string name="editor_recipe_description">Описание</string>
+    <string name="editor_ingredient">Ингредиент</string>
+    <string name="editor_ingredient_quantity">Количество</string>
+    <string name="editor_delete_ingredient">Удалить ингредиент</string>
 </resources>
