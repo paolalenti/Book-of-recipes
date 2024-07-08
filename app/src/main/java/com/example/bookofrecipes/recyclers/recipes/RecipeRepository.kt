@@ -1,6 +1,6 @@
 package com.example.bookofrecipes.recyclers.recipes
 
-import com.example.bookofrecipes.recyclers.recipes.recyclers.steps.RecipeStep
+import com.example.bookofrecipes.recyclers.steps.RecipeStep
 
 object RecipeRepository {
     val recipes: List<Recipe> = listOf(
@@ -17,7 +17,8 @@ object RecipeRepository {
                 RecipeStep("Вводим в сливки остывшую молочно-желтковую массу", false),
                 RecipeStep( "Выкладываем в формы и отправляем в морозилку" +
                         "Через час достаем, перемешиваем миксером и отправляем обратно до полного застывания", false),
-                RecipeStep("ура! теперь его можно подавать", false))
+                RecipeStep("ура! теперь его можно подавать", false)
+            )
         ),
     )
 }

@@ -1,6 +1,6 @@
 package com.example.bookofrecipes.recyclers.recipes
 
-import com.example.bookofrecipes.recyclers.recipes.recyclers.steps.RecipeStep
+import com.example.bookofrecipes.recyclers.steps.RecipeStep
 
 data class Recipe(
     val id: Int,
