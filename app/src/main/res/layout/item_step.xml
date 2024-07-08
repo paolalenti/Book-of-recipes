@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="16dp"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="0dp"
+    app:cardBackgroundColor="@color/middle_gray"
     app:cardCornerRadius="12dp"
-    app:cardElevation="8dp">
+    app:strokeWidth="2dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,41 +16,42 @@
         android:paddingHorizontal="16dp"
         android:paddingVertical="12dp">
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNumber"
-            app:layout_constraintVertical_bias="0.0"
-            android:checked="false" />
-
         <TextView
             android:id="@+id/tvNumber"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:textSize="32sp"
-            tools:text="1"/>
+            android:textSize="32dp"
+            android:gravity="center"
+            tools:text="20"
+            android:textColor="@color/white"/>
 
-        <TextView
-            android:id="@+id/tvStep"
-            android:layout_width="319dp"
-            android:layout_height="58dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tvNumber"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="ааа кароч это перавй шаг прикинь!!!! типо ты закинул
-картошку я хз или че мы варим там ну вот кароч супер класс))" />
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNumber"
+            android:checked="false" />
 
+    <TextView
+        android:id="@+id/tvStep"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        tools:text="ааа кароч это перавй шаг прикинь!!!! типо ты закинул
+        картошку я хз или че мы варим там ну вот кароч супер класс))" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
