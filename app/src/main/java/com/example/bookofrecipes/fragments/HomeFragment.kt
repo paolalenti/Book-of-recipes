@@ -37,7 +37,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             )
             rvRecipe.adapter = adapter
             rvRecipe.layoutManager = LinearLayoutManager(requireContext())
-
+            btCreateNewRecipe.setOnClickListener {
+                findNavController().navigate(
+                    resId = R.id.action_homeFragment_to_recipeEditorFragment
+                )
+            }
         }
     }
 

@@ -10,7 +10,7 @@ import com.example.bookofrecipes.data.models.IngredientQuantity
 @Dao
 interface IngredientQuantityDao {
     @Insert
-    fun insert(vararg ingredientQuantity: IngredientQuantity)
+    fun insert(vararg ingredientQuantity: IngredientQuantity): Array<Long>
 
     @Query("SELECT * FROM ingredients_quantities WHERE recipe_id = :recipeId")
     fun getAllByRecipeId(recipeId: Long): List<IngredientQuantity>
