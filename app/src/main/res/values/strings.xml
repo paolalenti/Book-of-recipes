@@ -24,4 +24,8 @@
     <string name="editor_ingredient">Ingredient</string>
     <string name="editor_ingredient_quantity">Quantity</string>
     <string name="editor_delete_ingredient">Delete ingredient</string>
+    <string name="editor_add_ingredient">Add ingredient</string>
+    <string name="editor_drag_indicator">Drag indicator</string>
+    <string name="editor_add_step">Add step</string>
+    <string name="editor_step_number_format" translatable="false">%1$d.</string>
 </resources>

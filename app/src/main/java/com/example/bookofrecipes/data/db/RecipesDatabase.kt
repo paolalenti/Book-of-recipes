@@ -1,6 +1,8 @@
 package com.example.bookofrecipes.data.db
 
+import android.content.Context
 import androidx.room.Database
+import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.bookofrecipes.data.dao.IngredientDao
 import com.example.bookofrecipes.data.dao.IngredientQuantityDao
@@ -23,4 +25,16 @@ abstract class RecipesDatabase : RoomDatabase() {
     abstract fun recipeStepDao(): RecipeStepDao
     abstract fun ingredientDao(): IngredientDao
     abstract fun ingredientQuantityDao(): IngredientQuantityDao
+
+    companion object {
+        @Volatile
+        private var instance: RecipesDatabase? = null
+
+        fun getInstance(context: Context): RecipesDatabase = instance ?: synchronized(this) {
+            instance ?: build(context).also { instance = it }
+        }
+
+        private fun build(context: Context): RecipesDatabase =
+            Room.databaseBuilder(context, RecipesDatabase::class.java, "recipes_db").allowMainThreadQueries().build()
+    }
 }

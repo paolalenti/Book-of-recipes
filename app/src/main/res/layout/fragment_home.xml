@@ -30,7 +30,7 @@
         tools:listitem="@layout/item_recipe" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
+        android:id="@+id/btCreateNewRecipe"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:text="@string/main_menu_add_button"

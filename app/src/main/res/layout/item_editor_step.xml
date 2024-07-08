@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
     <ImageView
         android:id="@+id/iv_drag_indicator"
         android:layout_width="wrap_content"
@@ -12,32 +11,32 @@
         android:contentDescription="@string/editor_drag_indicator"
         android:src="@drawable/baseline_drag_indicator_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/tv_ingredient_name"
+        app:layout_constraintEnd_toStartOf="@id/tv_number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <AutoCompleteTextView
-        android:id="@+id/tv_ingredient_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:hint="@string/editor_ingredient"
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/et_step_description"
         app:layout_constraintStart_toEndOf="@id/iv_drag_indicator"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/et_ingredient_quantity"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_ingredient_quantity"
+        android:id="@+id/et_step_description"
         android:layout_width="0dp"
+        android:minHeight="64dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
         android:importantForAutofill="no"
         android:ems="10"
-        android:inputType="text"
-        android:hint="@string/editor_ingredient_quantity"
-        app:layout_constraintStart_toEndOf="@+id/tv_ingredient_name"
-        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_number"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

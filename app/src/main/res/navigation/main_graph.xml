@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_homeAdvancedFragment"
             app:destination="@id/homeAdvancedFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_recipeEditorFragment"
+            app:destination="@id/recipeEditorFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
@@ -29,4 +32,8 @@
         android:name="com.example.bookofrecipes.fragments.HomeAdvancedFragment"
         android:label="fragment_home_advanced"
         tools:layout="@layout/fragment_home_advanced" />
+    <fragment
+        android:id="@+id/recipeEditorFragment"
+        android:name="com.example.bookofrecipes.fragments.RecipeEditorFragment"
+        android:label="RecipeEditorFragment" />
 </navigation>

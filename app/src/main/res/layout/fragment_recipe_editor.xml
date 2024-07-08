@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clEditorLayout"
         android:layout_width="match_parent"
@@ -17,9 +18,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:ems="10"
+            android:hint="@string/editor_recipe_name"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:text="@string/editor_recipe_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -31,9 +32,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:ems="10"
+            android:hint="@string/editor_recipe_time"
             android:importantForAutofill="no"
             android:inputType="text"
-            android:text="@string/editor_recipe_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_recipe_name"
@@ -45,9 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:ems="10"
+            android:hint="@string/editor_recipe_description"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:text="@string/editor_recipe_description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/et_recipe_time"
@@ -75,6 +76,16 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_ingredients_label"
             tools:listitem="@layout/item_editor_ingredient" />
 
+        <Button
+            android:id="@+id/bt_add_ingredient"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_add_ingredient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_ingredients" />
+
         <TextView
             android:id="@+id/tv_steps_label"
             android:layout_width="0dp"
@@ -84,9 +95,10 @@
             android:text="@string/editor_steps_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rv_ingredients" />
+            app:layout_constraintTop_toBottomOf="@id/bt_add_ingredient" />
 
         <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/item_editor_step"
             android:id="@+id/rv_steps"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -96,13 +108,25 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_steps_label" />
 
         <Button
+            android:id="@+id/bt_add_step"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/editor_add_step"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_steps" />
+
+        <Button
             android:id="@+id/bt_create"
-            android:layout_width="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/editor_create_recipe"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rv_steps" />
+            app:layout_constraintTop_toBottomOf="@+id/bt_add_step" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

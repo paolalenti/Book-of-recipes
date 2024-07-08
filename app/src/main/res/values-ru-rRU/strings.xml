@@ -15,4 +15,7 @@
     <string name="editor_ingredient">Ингредиент</string>
     <string name="editor_ingredient_quantity">Количество</string>
     <string name="editor_delete_ingredient">Удалить ингредиент</string>
+    <string name="editor_add_ingredient">Добавить ингредиент</string>
+    <string name="editor_drag_indicator">Индикатор перетаскивания</string>
+    <string name="editor_add_step">Добавить шаг</string>
 </resources>
