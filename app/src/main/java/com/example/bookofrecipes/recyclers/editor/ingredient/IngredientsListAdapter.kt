@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bookofrecipes.data.db.RecipesDatabase
 import com.example.bookofrecipes.data.models.IngredientQuantity
 import com.example.bookofrecipes.databinding.ItemEditorIngredientBinding
-import com.example.bookofrecipes.recyclers.editor.step.StepHolder
 
 class IngredientsListAdapter(
     private var items: ArrayList<IngredientQuantityFormData>, private val db: RecipesDatabase

@@ -4,11 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.bookofrecipes.R
 import com.example.bookofrecipes.data.db.RecipesDatabase
 import com.example.bookofrecipes.data.models.RecipeStep
 import com.example.bookofrecipes.databinding.ItemEditorStepBinding
-import com.example.bookofrecipes.recyclers.editor.ingredient.IngredientQuantityFormData
 import kotlin.math.max
 import kotlin.math.min
 
