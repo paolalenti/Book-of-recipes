@@ -21,4 +21,6 @@
     <string name="editor_empty_step_error">Описание шага не может быть пустым</string>
     <string name="editor_name_error">Название рецепта не может быть пустым</string>
     <string name="editor_empty_ingredient_error">Ингредиент не может иметь пустое имя</string>
+    <string name="description_fab_star">добавить в избранное</string>
+    <string name="authorsFragment">Авторы</string>
 </resources>
