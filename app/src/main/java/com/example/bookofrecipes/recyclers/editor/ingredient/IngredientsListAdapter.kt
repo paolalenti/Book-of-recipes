@@ -35,6 +35,8 @@ class IngredientsListAdapter(
         }
     })
 
+    fun containsNull(): Boolean = items.find { it.name == "" } != null
+
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
         super.onAttachedToRecyclerView(recyclerView)
         view = recyclerView

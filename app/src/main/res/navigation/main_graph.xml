@@ -35,5 +35,9 @@
     <fragment
         android:id="@+id/recipeEditorFragment"
         android:name="com.example.bookofrecipes.fragments.RecipeEditorFragment"
-        android:label="RecipeEditorFragment" />
+        android:label="RecipeEditorFragment" >
+        <action
+            android:id="@+id/action_recipeEditorFragment_to_homeAdvancedFragment"
+            app:destination="@id/homeAdvancedFragment" />
+    </fragment>
 </navigation>

@@ -28,4 +28,7 @@
     <string name="editor_drag_indicator">Drag indicator</string>
     <string name="editor_add_step">Add step</string>
     <string name="editor_step_number_format" translatable="false">%1$d.</string>
+    <string name="editor_empty_step_error">Step\'s description can\'t be empty!</string>
+    <string name="editor_name_error">Recipe\'s name can\'t be empty!</string>
+    <string name="editor_empty_ingredient_error">Ingredient can\'t has empty name</string>
 </resources>

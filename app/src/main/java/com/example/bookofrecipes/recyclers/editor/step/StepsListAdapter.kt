@@ -59,7 +59,7 @@ class StepsListAdapter(private var items: ArrayList<String?>, private val db: Re
         notifyItemInserted(newIt)
     }
 
-    fun containsNull(): Boolean = items.contains(null)
+    fun containsNull(): Boolean = items.contains(null) or items.contains("")
 
     fun addItemsToDb(recipeId: Long) {
         var removedCount = 0

@@ -18,4 +18,7 @@
     <string name="editor_add_ingredient">Добавить ингредиент</string>
     <string name="editor_drag_indicator">Индикатор перетаскивания</string>
     <string name="editor_add_step">Добавить шаг</string>
+    <string name="editor_empty_step_error">Описание шага не может быть пустым</string>
+    <string name="editor_name_error">Название рецепта не может быть пустым</string>
+    <string name="editor_empty_ingredient_error">Ингредиент не может иметь пустое имя</string>
 </resources>
