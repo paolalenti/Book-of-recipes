@@ -6,6 +6,4 @@
     <string name="home_screen">Рецепты</string>
     <string name="main_menu_title">Рецепты для вас</string>
     <string name="autor_list_title">Над приложением работали:</string>
-    <string name="description_fab_star">добавить в избранное</string>
-    <string name="authorsFragment">Авторы</string>
 </resources>
