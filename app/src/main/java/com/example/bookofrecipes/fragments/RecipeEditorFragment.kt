@@ -21,8 +21,9 @@ class RecipeEditorFragment : Fragment(R.layout.fragment_recipe_editor) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         db = RecipesDatabase.getInstance(requireContext())
-        ingredientsAdapter = IngredientsListAdapter(items = arrayListOf<IngredientQuantityFormData>(), db = db)
-        stepsAdapter = StepsListAdapter(items = arrayListOf<String?>())
+        ingredientsAdapter =
+            IngredientsListAdapter(items = arrayListOf<IngredientQuantityFormData>(), db = db)
+        stepsAdapter = StepsListAdapter(items = arrayListOf<String?>(), db = db)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
