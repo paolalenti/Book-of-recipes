@@ -31,5 +31,6 @@
     <string name="editor_empty_step_error">Step\'s description can\'t be empty!</string>
     <string name="editor_name_error">Recipe\'s name can\'t be empty!</string>
     <string name="editor_empty_ingredient_error">Ingredient can\'t has empty name</string>
-
+    <string name="description_fab_star">add to favorites</string>
+    <string name="authorsFragment">Authors</string>
 </resources>
