@@ -13,7 +13,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.bookofrecipes.R
 import com.example.bookofrecipes.databinding.FragmentHomeAdvancedBinding
 import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
-import com.example.bookofrecipes.recyclers.recipes.recyclers.ingredients.IngredientAdapter
+import com.example.bookofrecipes.recyclers.ingredients.IngredientAdapter
 import com.example.bookofrecipes.recyclers.steps.StepAdapter
 
 class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
