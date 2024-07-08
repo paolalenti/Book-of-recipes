@@ -8,13 +8,13 @@
     android:layout_marginTop="0dp"
     app:cardBackgroundColor="@color/middle_gray"
     app:cardCornerRadius="12dp"
-    app:strokeWidth="2dp">
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="16dp"
-        android:paddingVertical="12dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="12dp">
 
         <TextView
             android:id="@+id/tvNumber"

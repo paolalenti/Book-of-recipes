@@ -72,6 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        tools:itemCount="2"
         app:layout_constraintTop_toBottomOf="@+id/tvTime"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +83,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        tools:itemCount="1"
         app:layout_constraintTop_toBottomOf="@+id/rvIngredient"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,12 +95,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:padding="16dp"
-        android:background="@drawable/recipe_background"
+        android:background="@drawable/recipe_outline"
         android:text="очень большой рецепт очень большой рецепт очень большой рецепт
-            очень большой рецепт очень большой рецепт очень большой рецепт"
+        очень большой рецепт очень большой рецепт очень большой рецепт"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintTop_toBottomOf="@+id/rvStep"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -118,7 +121,7 @@
         app:backgroundTint="@color/orange_color"
         app:borderWidth="4dp"
         app:elevation="6dp"
-        app:rippleColor="@color/orange_color"
+        app:rippleColor="@color/dark_orange"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
