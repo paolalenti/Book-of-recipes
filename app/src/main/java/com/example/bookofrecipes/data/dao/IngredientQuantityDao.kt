@@ -17,7 +17,7 @@ interface IngredientQuantityDao {
      * Insert new quantity into database
      *
      * @param ingredientQuantity Quantities to insert
-     * @return Array of quantity indices
+     * @return Array of quantity identifiers
      */
     @Insert
     fun insert(vararg ingredientQuantity: IngredientQuantity): Array<Long>
