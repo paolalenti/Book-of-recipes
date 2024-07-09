@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.bookofrecipes.R
 import com.example.bookofrecipes.recyclers.recipes.RecipeAdapter
-import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
 import com.example.bookofrecipes.databinding.FragmentHomeBinding
+import com.example.bookofrecipes.data.db.RecipesDatabase
+import java.util.ArrayList
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -26,7 +27,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun initAdapter() {
         binding?.run {
             adapter = RecipeAdapter(
-                list = RecipeRepository.recipes,
+                list = ArrayList(RecipesDatabase.getInstance(requireContext()).recipeDao().getAll()),
                 glide = Glide.with(this@HomeFragment),
                 onClick = {
                     findNavController().navigate(

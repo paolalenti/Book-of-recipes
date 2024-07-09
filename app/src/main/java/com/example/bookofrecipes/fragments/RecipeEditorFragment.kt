@@ -92,7 +92,7 @@ class RecipeEditorFragment : Fragment(R.layout.fragment_recipe_editor) {
 
                     findNavController().navigate(
                         resId = R.id.action_recipeEditorFragment_to_homeAdvancedFragment,
-                        // args = HomeAdvancedFragment.bundle(context, index) // TODO: change index type from Int to Long in HomeAdvancedFragment
+                        args = HomeAdvancedFragment.bundle(context, index)
                     )
                 }
             }

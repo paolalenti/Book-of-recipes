@@ -3,6 +3,7 @@ package com.example.bookofrecipes.recyclers.steps
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.bookofrecipes.data.models.RecipeStep
 import com.example.bookofrecipes.databinding.ItemStepBinding
 
 class StepAdapter(
@@ -20,7 +21,7 @@ class StepAdapter(
     )
 
     override fun onBindViewHolder(holder: StepHolder, position: Int) {
-        holder.onBind(steps[position], position)
+        holder.onBind(steps[position])
     }
 
     override fun getItemCount(): Int = steps.size
