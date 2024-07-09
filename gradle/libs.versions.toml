@@ -13,8 +13,10 @@ constraintlayout = "2.1.4"
 navVersion = "2.7.7"
 roomRuntime = "2.6.1"
 ksp = "1.9.0-1.0.13"
+dokka = "1.9.20"
 
 [libraries]
+android-documentation-plugin = { module = "org.jetbrains.dokka:android-documentation-plugin", version.ref = "dokka" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navVersion" }
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navVersion" }
@@ -35,4 +37,5 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 google-devtools-ksp = {id="com.google.devtools.ksp", version.ref="ksp"}
+jetbrains-dokka = {id="org.jetbrains.dokka", version.ref = "dokka"}
 
