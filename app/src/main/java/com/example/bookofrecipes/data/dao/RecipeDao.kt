@@ -9,7 +9,7 @@ import com.example.bookofrecipes.data.models.Recipe
 
 /**
  * Data access object for Recipe
- * @sample dao.searchAll("search query") # will return list of matching recipes
+ * @sample RecipeDao dao; dao.searchAll("search query") # will return list of matching recipes
  */
 @Dao
 interface RecipeDao {
