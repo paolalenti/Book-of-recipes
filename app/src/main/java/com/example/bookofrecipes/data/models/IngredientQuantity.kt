@@ -5,6 +5,14 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
+/**
+ * Ingredient quantity database model. Many-to-many relation between recipes and ingredients
+ *
+ * @property id Unique index
+ * @property recipeId Index of recipe
+ * @property ingredientId Index of ingredient
+ * @property quantity Quantity of ingredient or null
+ */
 @Entity(
     tableName = "ingredients_quantities",
     foreignKeys = [
