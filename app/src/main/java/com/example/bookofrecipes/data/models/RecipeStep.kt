@@ -5,6 +5,14 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
+/**
+ * Recipe's step database model
+ *
+ * @property id Unique identifier of step
+ * @property recipeId Identifier of parent recipe
+ * @property content Description of step
+ * @property number Number in steps chain
+ */
 @Entity(
     tableName = "recipe_steps",
     foreignKeys = [
