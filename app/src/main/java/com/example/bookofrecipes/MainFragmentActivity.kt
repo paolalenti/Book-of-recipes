@@ -1,6 +1,7 @@
 package com.example.bookofrecipes
 
 import android.os.Bundle
+import androidx.activity.addCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,12 +31,9 @@ class MainFragmentActivity : AppCompatActivity() {
         controller?.let { navController ->
             binding?.bottomNavigation?.setupWithNavController(navController)
         }
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-
-        controller?.navigateUp()
+        onBackPressedDispatcher.addCallback {
+            controller?.navigateUp()
+        }
     }
 
     override fun onDestroy() {
