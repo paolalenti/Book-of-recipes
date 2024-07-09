@@ -20,6 +20,9 @@ interface RecipeDao {
             "WHERE recipe_fts MATCH :query LIMIT :limit OFFSET :offset")
     fun searchLimited(query: String, limit: Long, offset: Long = 0): List<Recipe>
 
+    @Query("SELECT * FROM recipes WHERE favorite = 1")
+    fun getFavorites(): List<Recipe>
+
     @Query("SELECT recipes.* FROM recipes, " +
             "(SELECT recipe_id, COUNT(recipe_id) as cnt FROM ingredients_quantities " +
             "WHERE ingredient_id in (:ingredientIds) GROUP BY recipe_id HAVING cnt = :count) " +
