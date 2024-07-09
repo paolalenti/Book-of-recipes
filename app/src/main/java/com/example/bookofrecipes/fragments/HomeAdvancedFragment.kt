@@ -13,7 +13,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.bookofrecipes.R
 import com.example.bookofrecipes.data.db.RecipesDatabase
 import com.example.bookofrecipes.databinding.FragmentHomeAdvancedBinding
-import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
 import com.example.bookofrecipes.recyclers.ingredients.IngredientAdapter
 import com.example.bookofrecipes.recyclers.steps.StepAdapter
 
@@ -30,13 +29,16 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
         binding = FragmentHomeAdvancedBinding.bind(view)
         db = RecipesDatabase.getInstance(requireContext())
         val recipeId = arguments?.getLong("RECIPE_ID") ?: return
-        val recipe = db.recipeDao().getById(recipeId)
+        var recipe = db.recipeDao().getById(recipeId)
         val ingredients = db.ingredientQuantityDao().getAllByRecipeId(recipeId)
         val steps = db.recipeStepDao().getAllByRecipeId(recipeId)
+        steps.sortedBy { it.number }
         glide = Glide.with(this@HomeAdvancedFragment)
         binding?.run {
             tvName.text = recipe?.name
             tvTime.text = recipe?.time
+            tvDescription.text = recipe?.description
+            fabStar.isChecked = recipe?.favorite == true
 
             glide?.load(recipe?.image)
                 ?.error(R.drawable.img_not_found)
@@ -51,6 +53,13 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
 
             fabGoBack.setOnClickListener {
                 findNavController().navigateUp()
+            }
+
+            fabStar.setOnCheckedChangeListener { _, isChecked ->
+                if (recipe != null) {
+                    recipe.favorite = isChecked
+                    db.recipeDao().update(recipe)
+                }
             }
         }
     }

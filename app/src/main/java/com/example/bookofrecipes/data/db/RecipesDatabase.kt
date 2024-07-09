@@ -21,7 +21,7 @@ import com.example.bookofrecipes.data.models.RecipeStep
  */
 @Database(
     entities = [Recipe::class, RecipeStep::class, IngredientQuantity::class, Ingredient::class, IngredientFts::class, RecipeFts::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class RecipesDatabase : RoomDatabase() {

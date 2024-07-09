@@ -33,7 +33,7 @@
                 android:layout_gravity="bottom"
                 android:background="@drawable/gradient_overlay" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
+            <CheckBox
                 android:id="@+id/fabStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -45,7 +45,9 @@
                 app:backgroundTint="@android:color/transparent"
                 app:elevation="0dp"
                 app:maxImageSize="32dp"
-                app:tint="@color/orange_color" />
+                app:tint="@color/orange_color">
+            </CheckBox>
+
         </FrameLayout>
 
         <TextView
@@ -71,28 +73,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvIngredient"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTime"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_ingredient" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvStep"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvIngredient"
-            tools:itemCount="1"
-            tools:listitem="@layout/item_step" />
-
         <TextView
             android:id="@+id/tvDescription"
             android:layout_width="0dp"
@@ -108,7 +88,29 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvStep" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTime" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIngredient"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_ingredient" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvIngredient"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_step" />
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton

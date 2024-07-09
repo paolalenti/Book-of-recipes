@@ -21,7 +21,11 @@
         android:id="@+id/favoritesFragment"
         android:name="com.example.bookofrecipes.fragments.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites" />
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_homeAdvancedFragment"
+            app:destination="@id/homeAdvancedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.bookofrecipes.fragments.SettingsFragment"
