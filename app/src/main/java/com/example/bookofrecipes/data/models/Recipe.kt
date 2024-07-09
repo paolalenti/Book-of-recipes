@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 /**
  * Recipe database model
  *
- * @property id Unique index of recipe
+ * @property id Unique identifier of recipe
  * @property name Name of recipe
  * @property time Time to cook
  * @property description Description of recipe
