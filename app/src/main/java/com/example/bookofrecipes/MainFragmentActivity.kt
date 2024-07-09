@@ -31,7 +31,6 @@ class MainFragmentActivity : AppCompatActivity() {
         controller?.let { navController ->
             binding?.bottomNavigation?.setupWithNavController(navController)
         }
-
         onBackPressedDispatcher.addCallback {
             controller?.navigateUp()
         }
