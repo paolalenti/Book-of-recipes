@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
+import com.example.bookofrecipes.data.models.Recipe
 import com.example.bookofrecipes.databinding.ItemRecipeBinding
 
 class RecipeAdapter(

@@ -31,7 +31,11 @@
         android:id="@+id/homeAdvancedFragment"
         android:name="com.example.bookofrecipes.fragments.HomeAdvancedFragment"
         android:label="fragment_home_advanced"
-        tools:layout="@layout/fragment_home_advanced" />
+        tools:layout="@layout/fragment_home_advanced" >
+        <action
+            android:id="@+id/action_homeAdvancedFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/recipeEditorFragment"
         android:name="com.example.bookofrecipes.fragments.RecipeEditorFragment"

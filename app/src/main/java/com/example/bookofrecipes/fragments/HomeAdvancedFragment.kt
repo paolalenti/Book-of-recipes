@@ -11,6 +11,7 @@ import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.example.bookofrecipes.R
+import com.example.bookofrecipes.data.db.RecipesDatabase
 import com.example.bookofrecipes.databinding.FragmentHomeAdvancedBinding
 import com.example.bookofrecipes.recyclers.recipes.RecipeRepository
 import com.example.bookofrecipes.recyclers.ingredients.IngredientAdapter
@@ -22,27 +23,31 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
         DiskCacheStrategy.ALL
     )
     private var glide: RequestManager? = null
+    private lateinit var db: RecipesDatabase
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentHomeAdvancedBinding.bind(view)
-        val recipeId = arguments?.getInt("RECIPE_ID") ?: return
-        val recipe = RecipeRepository.recipes.find { it.id == recipeId } ?: return
+        db = RecipesDatabase.getInstance(requireContext())
+        val recipeId = arguments?.getLong("RECIPE_ID") ?: return
+        val recipe = db.recipeDao().getById(recipeId)
+        val ingredients = db.ingredientQuantityDao().getAllByRecipeId(recipeId)
+        val steps = db.recipeStepDao().getAllByRecipeId(recipeId)
         glide = Glide.with(this@HomeAdvancedFragment)
         binding?.run {
-            tvName.text = recipe.name
-            tvTime.text = recipe.time
+            tvName.text = recipe?.name
+            tvTime.text = recipe?.time
 
-            glide?.load(recipe.url)
+            glide?.load(recipe?.image)
                 ?.error(R.drawable.img_not_found)
                 ?.placeholder(R.drawable.img_cat)?.apply(requestOptions)
                 ?.into(ivAboutImage)
 
             rvIngredient.layoutManager = LinearLayoutManager(context)
-            rvIngredient.adapter = IngredientAdapter(recipe.ingredients)
+            rvIngredient.adapter = IngredientAdapter(ingredients, db)
 
             rvStep.layoutManager = LinearLayoutManager(context)
-            rvStep.adapter = StepAdapter(recipe.steps)
+            rvStep.adapter = StepAdapter(steps)
 
             fabGoBack.setOnClickListener {
                 findNavController().navigateUp()
@@ -51,9 +56,9 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
     }
 
     companion object {
-        fun bundle(context: Context?, recipeId: Int): Bundle {
+        fun bundle(context: Context?, recipeId: Long): Bundle {
             val bundle = Bundle()
-            bundle.putInt("RECIPE_ID", recipeId)
+            bundle.putLong("RECIPE_ID", recipeId)
             return bundle
         }
     }
