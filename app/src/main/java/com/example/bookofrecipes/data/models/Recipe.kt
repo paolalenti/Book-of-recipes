@@ -20,5 +20,5 @@ data class Recipe(
     val time: String? = null,
     val description: String? = null,
     val image: String? = null,
-    val favorite: Boolean? = null
+    var favorite: Boolean? = null
 )
