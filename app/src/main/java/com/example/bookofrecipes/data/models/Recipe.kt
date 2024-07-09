@@ -3,6 +3,16 @@ package com.example.bookofrecipes.data.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+/**
+ * Recipe database model
+ *
+ * @property id Unique index of recipe
+ * @property name Name of recipe
+ * @property time Time to cook
+ * @property description Description of recipe
+ * @property image Base64 encoded image or url
+ * @property favorite Is recipe favorite
+ */
 @Entity(tableName = "recipes")
 data class Recipe(
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
