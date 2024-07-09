@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.jetbrains.dokka)
 }
 
 android {
@@ -58,4 +59,6 @@ dependencies {
     testImplementation(libs.androidx.room.testing)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    dokkaPlugin(libs.android.documentation.plugin)
 }

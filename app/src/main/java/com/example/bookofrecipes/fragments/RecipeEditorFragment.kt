@@ -83,7 +83,8 @@ class RecipeEditorFragment : Fragment(R.layout.fragment_recipe_editor) {
                         Recipe(
                             name = etRecipeName.text.toString(),
                             time = etRecipeTime.text.toString(),
-                            description = etRecipeDescription.text.toString()
+                            description = etRecipeDescription.text.toString(),
+                            image = etRecipeImage.text.toString()
                         )
                     )[0]
                     ingredientsAdapter.addItemsToDb(index)

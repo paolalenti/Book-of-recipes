@@ -1,4 +1,4 @@
-package com.example.bookofrecipes.recyclers.recipes.recyclers.steps
+package com.example.bookofrecipes.recyclers.steps
 
 data class RecipeStep(
     val description: String,

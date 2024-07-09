@@ -33,4 +33,5 @@
     <string name="editor_empty_ingredient_error">Ingredient can\'t has empty name</string>
     <string name="description_fab_star">add to favorites</string>
     <string name="authorsFragment">Authors</string>
+    <string name="editor_recipe_image">Image URL</string>
 </resources>

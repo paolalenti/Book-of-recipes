@@ -1,4 +1,4 @@
-package com.example.bookofrecipes.recyclers.recipes.recyclers.steps
+package com.example.bookofrecipes.recyclers.steps
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
