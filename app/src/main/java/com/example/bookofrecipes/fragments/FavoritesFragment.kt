@@ -27,7 +27,7 @@ class FavoritesFragment : Fragment(R.layout.fragment_favorites) {
     private fun initAdapter() {
         binding?.run {
             adapter = RecipeAdapter(
-                list = ArrayList(RecipesDatabase.getInstance(requireContext()).recipeDao().getAll()),
+                list = ArrayList(RecipesDatabase.getInstance(requireContext()).recipeDao().getFavorites()),
                 glide = Glide.with(this@FavoritesFragment),
                 onClick = {
                     findNavController().navigate(
