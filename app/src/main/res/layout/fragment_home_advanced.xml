@@ -41,12 +41,12 @@
                 android:layout_marginEnd="0dp"
                 android:layout_marginBottom="0dp"
                 android:contentDescription="@string/description_fab_star"
-                android:src="@drawable/ic_star_button"
+                android:button="@drawable/star_selector"
                 app:backgroundTint="@android:color/transparent"
                 app:elevation="0dp"
-                app:maxImageSize="32dp"
-                app:tint="@color/orange_color">
-            </CheckBox>
+                android:checked="false"
+                app:maxImageSize="32dp">
+        </CheckBox>
 
         </FrameLayout>
 
@@ -90,27 +90,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTime" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvIngredient"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDescription"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_ingredient" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvStep"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewIngredient"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/middle_gray"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescription"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvIngredient"
-            tools:itemCount="1"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_ingredient" />
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewStep"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/middle_gray"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:layout_constraintTop_toBottomOf="@id/cardViewIngredient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:itemCount="8"
             tools:listitem="@layout/item_step" />
+    </com.google.android.material.card.MaterialCardView>
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
