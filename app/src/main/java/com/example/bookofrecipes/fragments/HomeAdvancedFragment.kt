@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
@@ -42,7 +43,7 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
 
             glide?.load(recipe?.image)
                 ?.error(R.drawable.img_not_found)
-                ?.placeholder(R.drawable.img_cat)?.apply(requestOptions)
+                ?.placeholder(R.drawable.img_not_found)?.apply(requestOptions)
                 ?.into(ivAboutImage)
 
             rvIngredient.layoutManager = LinearLayoutManager(context)
