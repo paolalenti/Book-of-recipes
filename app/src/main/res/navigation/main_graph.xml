@@ -46,6 +46,7 @@
         android:label="RecipeEditorFragment" >
         <action
             android:id="@+id/action_recipeEditorFragment_to_homeAdvancedFragment"
-            app:destination="@id/homeAdvancedFragment" />
+            app:destination="@id/homeAdvancedFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
 </navigation>
