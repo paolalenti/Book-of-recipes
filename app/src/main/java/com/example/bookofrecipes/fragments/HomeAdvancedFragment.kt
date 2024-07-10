@@ -42,7 +42,7 @@ class HomeAdvancedFragment : Fragment(R.layout.fragment_home_advanced) {
 
             glide?.load(recipe?.image)
                 ?.error(R.drawable.img_not_found)
-                ?.placeholder(R.drawable.img_cat)?.apply(requestOptions)
+                ?.placeholder(R.drawable.img_not_found)?.apply(requestOptions)
                 ?.into(ivAboutImage)
 
             rvIngredient.layoutManager = LinearLayoutManager(context)

@@ -32,7 +32,7 @@ class RecipeHolder(
             glide
                 .load(recipe.image)
                 .error(R.drawable.img_not_found)
-                .placeholder(R.drawable.img_cat)
+                .placeholder(R.drawable.img_not_found)
                 .apply(requestOptions)
                 .into(ivImage)
 
